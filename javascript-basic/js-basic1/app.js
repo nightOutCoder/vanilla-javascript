@@ -35,4 +35,34 @@ console.log('{ WAY-3 }');
 console.log(reverseInput3('RedJohn'));
 console.log('   ************[Reverse String Example END ]************   ');
 
+console.log('   ************[Remove Duplicate from Array Example START ]************   ');
+let arr = ["apple", "mango", "apple", "orange", "mango", "mango"];
+ 
+console.log('{ WAY-1 }');
+    function removeDuplicates1(arr) {
+        return [...new Set(arr)];
+    }
+ 
+console.log(removeDuplicates1(arr))
+
+console.log('{ WAY-2 }');
+    function removeDuplicates2(inputData){
+        let end = inputData.length-1;
+        const result = [];
+
+        for(let i = 0; i < end; i ++){
+            if(result.indexOf(inputData[i]) === -1){
+                result.push(inputData[i]);
+            }
+            else {
+                /* Printing duplicate Values */
+                console.log('Test'+inputData[i]);
+            }
+        }
+        return result; /* returning array of elements having no duplicates */
+    }
+console.log(removeDuplicates2([2,3,4,5,2,4,3,3]));
+console.log('   ************[Remove Duplicate from Array Example END ]************   ');
+
+
 console.log('########################## js-basic1/app.js END ##########################');
