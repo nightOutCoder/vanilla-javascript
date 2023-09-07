@@ -70,4 +70,27 @@ console.log(removeDuplicates2([2,3,4,5,2,4,3,3]));
 console.log('   ************[Remove Duplicate from Array Example END ]************   ');
 
 
+
+console.log('   **********[Return Duplicate Example Start ]*********   ');
+
+console.log('{ WAY-1 }');
+    function returnDuplicate(array) {
+    const duplicates = [];
+    let end = array.length
+
+    for (let i = 0; i < end; i++) {
+        for (let j = i + 1; j < end; j++) {
+            //console.log('j value is ' +j);
+          if (array[i] === array[j]) {
+            duplicates.push(array[i]);
+          }
+        }
+      }
+      console.log(duplicates);
+      return [...new Set(duplicates)];
+}
+console.log('The Duplicate are : ' + returnDuplicate([2,3,4,5,2,4,3,3]));
+console.log('   ************[Return Duplicate Example END ]************   ');
+
+
 console.log('########################## js-basic1/app.js END ##########################');
