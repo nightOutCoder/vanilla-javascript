@@ -1,4 +1,6 @@
 console.log('########################## js-basic1/app.js START ##########################');
+
+
 console.log('   **********[Reverse String Example Start ]*********   ');
 
 console.log('{ WAY-1 }');
@@ -34,6 +36,8 @@ console.log('{ WAY-3 }');
     }
 console.log(reverseInput3('RedJohn'));
 console.log('   ************[Reverse String Example END ]************   ');
+
+
 
 console.log('   ************[Remove Duplicate from Array Example START ]************   ');
 let arr = ["apple", "mango", "apple", "orange", "mango", "mango"];
