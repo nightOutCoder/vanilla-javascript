@@ -43,6 +43,7 @@ console.log('{ WAY-1 }');
         return [...new Set(arr)];
     }
  
+console.log('Input Array : ' + arr)    
 console.log(removeDuplicates1(arr))
 
 console.log('{ WAY-2 }');
@@ -56,7 +57,7 @@ console.log('{ WAY-2 }');
             }
             else {
                 /* Printing duplicate Values */
-                console.log('Test'+inputData[i]);
+                console.log('Duplicate Value is : '+inputData[i]);
             }
         }
         return result; /* returning array of elements having no duplicates */
