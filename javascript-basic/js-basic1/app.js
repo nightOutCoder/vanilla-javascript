@@ -1,0 +1,1 @@
+console.log('############ js-basic1/app.js #############');
