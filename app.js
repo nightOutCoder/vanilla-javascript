@@ -1,1 +1,1 @@
-console.log('############ Welcome to Vanilla JS #############');
+console.log('{{ Welcome to Vanilla JS }}');
