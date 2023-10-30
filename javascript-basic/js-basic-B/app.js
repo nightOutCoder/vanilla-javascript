@@ -99,3 +99,16 @@ const c = [true, 0.5, 'hey'];
 const d = c.toString(); // "true,0.5,hey"
 console.log(c == d); // true
 
+// Program : 19
+var bar = true;
+console.log(bar + 0) | (bar + 'xyz') | (bar + true ) | (bar + false)
+
+// Program : 20
+var x = 1;
+var output = (
+  function(){
+    delete x;
+    return x;
+})();
+console.log(output);
+
