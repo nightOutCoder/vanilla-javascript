@@ -1,7 +1,6 @@
-console.log('########################## js-basic1/app.js START ##########################');
+console.log('--Basic programs--');
 
-
-console.log('   **********[Reverse String Example Start ]*********   ');
+console.log('[Reverse String Example Start ]');
 
 console.log('{ WAY-1 }');
     function reverseInput1(inputData) {
@@ -35,11 +34,11 @@ console.log('{ WAY-3 }');
     return input.join('');
     }
 console.log(reverseInput3('RedJohn'));
-console.log('   ************[Reverse String Example END ]************   ');
+console.log('[Reverse String Example END ]');
 
 
 
-console.log('   ************[Remove Duplicate from Array Example START ]************   ');
+console.log('[Remove Duplicate from Array Example START ]');
 let arr = ["apple", "mango", "apple", "orange", "mango", "mango"];
  
 console.log('{ WAY-1 }');
@@ -67,11 +66,11 @@ console.log('{ WAY-2 }');
         return result; /* returning array of elements having no duplicates */
     }
 console.log(removeDuplicates2([2,3,4,5,2,4,3,3]));
-console.log('   ************[Remove Duplicate from Array Example END ]************   ');
+console.log('[Remove Duplicate from Array Example END ]');
 
 
 
-console.log('   **********[Return Duplicate Example Start ]*********   ');
+console.log('[Return Duplicate Example Start ]');
 
 console.log('{ WAY-1 }');
     function returnDuplicate(array) {
@@ -90,7 +89,5 @@ console.log('{ WAY-1 }');
       return [...new Set(duplicates)];
 }
 console.log('The Duplicate are : ' + returnDuplicate([2,3,4,5,2,4,3,3]));
-console.log('   ************[Return Duplicate Example END ]************   ');
+console.log('[Return Duplicate Example END ]');
 
-
-console.log('########################## js-basic1/app.js END ##########################');
