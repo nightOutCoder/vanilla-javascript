@@ -1,4 +1,4 @@
-console.log('--Basic programs--');
+console.log('<--JS Basic programs-->');
 
 console.log('[Reverse String Example Start ]');
 
@@ -54,7 +54,7 @@ console.log('{ WAY-2 }');
         let end = inputData.length-1;
         const result = [];
 
-        for(let i = 0; i < end; i ++){
+        for(let i = 0; i <= end; i ++){
             if(result.indexOf(inputData[i]) === -1){
                 result.push(inputData[i]);
             }
