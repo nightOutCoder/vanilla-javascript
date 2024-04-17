@@ -1,3 +1,4 @@
+console.log('[***************************************************************************************************************************]');
 console.log('<--JS Basic programs-->');
 
 console.log('[Reverse String Example Start ]');
@@ -30,12 +31,11 @@ console.log('{ WAY-3 }');
         start++;
         end--;
     }
-
     return input.join('');
-    }
+}
 console.log(reverseInput3('RedJohn'));
 console.log('[Reverse String Example END ]');
-
+console.log('[***************************************************************************************************************************]');
 
 
 console.log('[Remove Duplicate from Array Example START ]');
@@ -69,7 +69,7 @@ console.log(removeDuplicates2([2,3,4,5,2,4,3,3]));
 console.log('[Remove Duplicate from Array Example END ]');
 
 
-
+console.log('[***************************************************************************************************************************]');
 console.log('[Return Duplicate Example Start ]');
 
 console.log('{ WAY-1 }');
@@ -90,4 +90,4 @@ console.log('{ WAY-1 }');
 }
 console.log('The Duplicate are : ' + returnDuplicate([2,3,4,5,2,4,3,3]));
 console.log('[Return Duplicate Example END ]');
-
+console.log('[***************************************************************************************************************************]');
