@@ -91,3 +91,28 @@ console.log('{ WAY-1 }');
 console.log('The Duplicate are : ' + returnDuplicate([2,3,4,5,2,4,3,3]));
 console.log('[Return Duplicate Example END ]');
 console.log('[***************************************************************************************************************************]');
+
+/* via pre-defined functions */
+function frequencyOfElementWithNoPreDefinedFunction(inputData){
+    const result = {};
+    for(let element of inputData){
+        if(result[element])
+            result[element]++;
+        else 
+            result[element] = 1;
+    }
+    return result;
+}
+console.log(frequencyOfElementWithNoPreDefinedFunction(inputData));
+
+
+function frequencyOfElments(inputData){
+    const inputData = [3,4,5,1,2,3,0,9,1,9,9];
+
+    const result = inputData.reduce((acc,element) => {
+        acc[element] ? acc[element]++ : acc[element] = 1;
+        return acc;
+    },{});
+}
+console.log(frequencyOfElments(inputData));
+
