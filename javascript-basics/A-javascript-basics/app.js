@@ -70,26 +70,37 @@ console.log('[Remove Duplicate from Array Example END ]');
 
 
 console.log('[***************************************************************************************************************************]');
-console.log('[Return Duplicate Example Start ]');
+console.log('[Return All Duplicate Example Start ]');
 
-console.log('{ WAY-1 }');
-    function returnDuplicate(array) {
-    const duplicates = [];
-    let end = array.length
+const inputData  = [3,4,5,1,2,3,0,9,1,9,9];
 
-    for (let i = 0; i < end; i++) {
-        for (let j = i + 1; j < end; j++) {
-            //console.log('j value is ' +j);
-          if (array[i] === array[j]) {
-            duplicates.push(array[i]);
-          }
+function frequencyOfElementWithNoPreDefinedFunction(inputData){
+    const result = {};
+    for(let element of inputData){
+        if(result[element])
+            result[element]++;
+        else 
+            result[element] = 1;
+    }
+    console.log(result);
+
+    const finalResult = [];
+    for(let data in result){
+        if(result[data] >=2){
+            console.log(data,result[data]);
+            let n = result[data];
+            while(n>0){
+                finalResult.push(data);
+                n--;
+            }
+            
         }
-      }
-      console.log(duplicates);
-      return [...new Set(duplicates)];
+    }
+
+   return finalResult;
 }
-console.log('The Duplicate are : ' + returnDuplicate([2,3,4,5,2,4,3,3]));
-console.log('[Return Duplicate Example END ]');
+console.log(frequencyOfElementWithNoPreDefinedFunction(inputData));
+console.log('[Return All Duplicate Example END ]');
 console.log('[***************************************************************************************************************************]');
 
 /* via pre-defined functions */
