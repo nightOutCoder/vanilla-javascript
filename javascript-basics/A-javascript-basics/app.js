@@ -74,6 +74,8 @@ console.log('[Return All Duplicate Example Start ]');
 
 const inputData  = [3,4,5,1,2,3,0,9,1,9,9];
 
+
+/* Get all the duplicates */
 function frequencyOfElementWithNoPreDefinedFunction(inputData){
     const result = {};
     for(let element of inputData){
@@ -103,6 +105,7 @@ console.log(frequencyOfElementWithNoPreDefinedFunction(inputData));
 console.log('[Return All Duplicate Example END ]');
 console.log('[***************************************************************************************************************************]');
 
+
 /* via pre-defined functions */
 function frequencyOfElementWithNoPreDefinedFunction(inputData){
     const result = {};
@@ -127,3 +130,30 @@ function frequencyOfElments(inputData){
 }
 console.log(frequencyOfElments(inputData));
 
+
+/* Print fibonacci series */
+function fibonacciSeries(input){
+    let sum = 0;
+    for(let x = 0, y = 1; sum < input; x = y, y = sum, sum = x + y){
+        console.log(sum);
+    }
+}
+fibonacciSeries(10);
+
+
+/* two sum brute force way */
+var twoSum = function(nums, target) {
+    let result = [];
+    for(let i = 0; i < nums.length; i++){
+        for(let j = i + 1; j < nums.length; j++ ){
+            if((nums[i] + nums[j]) === target){
+                result.push(i);
+                result.push(j);
+            }
+        }
+        
+    }
+    console.log(result);
+    return result;
+};
+twoSum([2,11,7,15],9);
