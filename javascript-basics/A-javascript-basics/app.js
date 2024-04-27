@@ -98,7 +98,6 @@ function frequencyOfElementWithNoPreDefinedFunction(inputData){
             
         }
     }
-
    return finalResult;
 }
 console.log(frequencyOfElementWithNoPreDefinedFunction(inputData));
@@ -106,7 +105,7 @@ console.log('[Return All Duplicate Example END ]');
 console.log('[***************************************************************************************************************************]');
 
 
-/* via pre-defined functions */
+/* via non pre-defined functions */
 function frequencyOfElementWithNoPreDefinedFunction(inputData){
     const result = {};
     for(let element of inputData){
@@ -120,6 +119,7 @@ function frequencyOfElementWithNoPreDefinedFunction(inputData){
 console.log(frequencyOfElementWithNoPreDefinedFunction(inputData));
 
 
+/* via functional way */
 function frequencyOfElments(inputData){
     const inputData = [3,4,5,1,2,3,0,9,1,9,9];
 
@@ -141,7 +141,7 @@ function fibonacciSeries(input){
 fibonacciSeries(10);
 
 
-/* two sum brute force way */
+/* two sum brute force way : O(n2) */
 var twoSum = function(nums, target) {
     let result = [];
     for(let i = 0; i < nums.length; i++){
@@ -157,3 +157,17 @@ var twoSum = function(nums, target) {
     return result;
 };
 twoSum([2,11,7,15],9);
+
+
+/* Elegent way : O(n) */
+function twoSum(nums, target) {
+    let numObj = {};
+      for (let i = 0; i < nums.length; i++) {
+        let complement = target - nums[i];
+        if (numObj[complement] !== undefined) {
+          return [numObj[complement], i];
+        }
+        numObj[nums[i]] = i;
+      }
+    }
+console.log(twoSum([2,7,6,17],9));
