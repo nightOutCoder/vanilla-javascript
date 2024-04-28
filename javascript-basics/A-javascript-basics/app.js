@@ -34,6 +34,23 @@ console.log('{ WAY-3 }');
     return input.join('');
 }
 console.log(reverseInput3('RedJohn'));
+
+
+let inputString = '1234 56';
+function stringReverseInMemory(inputData){
+    let input = [...inputData];
+    let j = input.length-1;
+    for(let i = 0,j = input.length-1; i <= j; i++,j--){
+        let temp;
+        temp = input[i];
+        input[i] = input[j];
+        input[j] = temp;
+    }
+    return input.join('');
+}
+console.log(stringReverseInMemory(inputString));
+
+
 console.log('[Reverse String Example END ]');
 console.log('[***************************************************************************************************************************]');
 
@@ -171,3 +188,58 @@ function twoSum(nums, target) {
       }
     }
 console.log(twoSum([2,7,6,17],9));
+
+
+
+/* Flatten Array */
+Array.prototype.flatten = function () {
+    const result = [];
+    for(const value of this){
+      if (Array.isArray(value)) {
+        const data = value.flatten();
+        console.log('if data : ', data);
+        result.push(...data);
+      } else {
+        console.log('else data : ', value);
+        result.push(value);
+      }
+    }
+    console.log('result : ', result);
+    return result;
+  };
+
+console.log([].flatten());
+console.log([1,2,3].flatten());
+console.log([[1,2],3,4].flatten());
+console.log([[1,2],[3,[4,5]],6].flatten());
+console.log([1,[2,[3],4,[5,6,[7]]]].flatten());
+console.log([100,['A','C'],1, [2, [3], 4, [5, 6, [7]]]].flatten());
+
+
+
+/* check if string is palindrome or not */
+let input = '123321';
+console.log(input.trim().length);
+function isPalindrome(input){
+    if(input.trim().length === 0){
+        return new Error('Input is empty');
+    }
+    return input.split('').reverse().join('');
+}
+console.log(isPalindrome(input));
+console.log(input  == isPalindrome(input) ? true : false);
+
+
+/* check if string is palindrome or not */
+function isPalindromeWithOutPredefinedFunctions(input){
+    let data = [...input];
+    let j = data.length-1;
+    console.log(data,j,j/2,Math.floor(j/2));
+    for(let i = 0 ; i <= Math.floor(j/2) ; i++){
+        console.log(i,j);
+        if(data[i] != data[j-i])
+            return false;
+    }
+    return true;
+}
+console.log(isPalindromeWithOutPredefinedFunctions(input));
