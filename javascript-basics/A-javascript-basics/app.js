@@ -243,3 +243,23 @@ function isPalindromeWithOutPredefinedFunctions(input){
     return true;
 }
 console.log(isPalindromeWithOutPredefinedFunctions(input));
+
+
+/* Find missing number */
+let arrInput = [3,0,1,4,5,6];
+function findMissingNumber(arrInput) {
+    let sum = 0;
+    let len = nums.length;
+    let totalSum = (len * (len + 1))/2;
+    for(let i = 0 ; i < len; i++){
+        sum +=nums[i];
+    }
+    return totalSum-sum;
+};
+
+console.log(findMissingNumber(arrInput));
+
+
+
+
+
