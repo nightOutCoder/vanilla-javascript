@@ -39,7 +39,6 @@ console.log(reverseInput3('RedJohn'));
 let inputString = '1234 56';
 function stringReverseInMemory(inputData){
     let input = [...inputData];
-    let j = input.length-1;
     for(let i = 0,j = input.length-1; i <= j; i++,j--){
         let temp;
         temp = input[i];
@@ -71,13 +70,9 @@ console.log('{ WAY-2 }');
         let end = inputData.length-1;
         const result = [];
 
-        for(let i = 0; i <= end; i ++){
-            if(result.indexOf(inputData[i]) === -1){
+        for(let i = 0; i <= end; i++){
+            if(result.indexOf(inputData[i]) < 0){
                 result.push(inputData[i]);
-            }
-            else {
-                /* Printing duplicate Values */
-                console.log('Duplicate Value is : '+inputData[i]);
             }
         }
         return result; /* returning array of elements having no duplicates */
@@ -87,13 +82,28 @@ console.log('[Remove Duplicate from Array Example END ]');
 
 
 console.log('[***************************************************************************************************************************]');
+Array.prototype.unique = function (){
+    const result = [];
+
+    for(let i = 0 ; i < this.length ; i++){
+        if(result.indexOf(this[i]) < 0) {
+            result.push(this[i]);
+        } 
+    }
+    return result;
+}
+console.log([2,3,4,1,2,3].unique());
+console.log([1,0,4,1,2,3,3].unique());
+console.log('[***************************************************************************************************************************]');
+
+console.log('[***************************************************************************************************************************]');
 console.log('[Return All Duplicate Example Start ]');
 
 const inputData  = [3,4,5,1,2,3,0,9,1,9,9];
 
 
 /* Get all the duplicates */
-function frequencyOfElementWithNoPreDefinedFunction(inputData){
+function frequencyOfElementWithNoPreDefinedFunction(inputData) {
     const result = {};
     for(let element of inputData){
         if(result[element])

@@ -1,5 +1,18 @@
 console.log('*******Object Examples******');
 
+    /* Demonstration */
+    // const resultData = {1:100};
+    // console.log(resultData[1]);
+    // console.log(resultData);
+    // console.log(resultData[1]++);
+    // console.log(resultData);
+    // resultData[1] =1000;
+    // console.log(resultData);
+    // for(let data in resultData){
+    //     console.log('1111',data);
+    // }
+
+    
 const objectInput = {
     name: 'John',
     age: 30,
@@ -65,3 +78,22 @@ const objPerson = {
 objPerson[city]  = 'ramput'; /* ReferenceError : city is not defined */
 objPerson['city'] = 'mbd';
 console.log(objPerson);
+
+
+const inputObjectData = [
+    {
+        name: 'red',
+        city: 'LA'
+    },
+    {
+        name: 'john',
+        city: 'RU'
+    }
+];
+
+inputObjectData[1].city = 'newCityName1';
+let newDataSet = inputObjectData;
+newDataSet[1].name = 'newName1';
+newDataSet[1].city = 'newCityName2';
+console.log(inputObjectData);
+console.log(newDataSet);
