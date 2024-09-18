@@ -122,7 +122,6 @@ function frequencyOfElementWithNoPreDefinedFunction(inputData) {
                 finalResult.push(data);
                 n--;
             }
-            
         }
     }
    return finalResult;
@@ -131,6 +130,30 @@ console.log(frequencyOfElementWithNoPreDefinedFunction(inputData));
 console.log('[Return All Duplicate Example END ]');
 console.log('[***************************************************************************************************************************]');
 
+
+/*
+* Get Output: Sunday2, Monday2, Tuesday1, Wednesday1
+*/
+let data = ["Sunday", "Monday", "Tuesday", "Wednesday", "Sunday", "Monday"];
+function getDulicateDataInFormat(inputData){
+    let objectData = {};
+
+    for(let data of inputData){
+        if(objectData[data]){
+            objectData[data]++
+        } else {
+            objectData[data] = 1;
+        }
+    }
+
+    let resultData = Object.entries(objectData)
+    .map(([key, value]) => `${key}${value}`)
+    .join(', ');
+
+    return resultData;
+}
+
+console.log(getDulicateDataInFormat(data));
 
 /* via non pre-defined functions */
 function frequencyOfElementWithNoPreDefinedFunction(inputData){
